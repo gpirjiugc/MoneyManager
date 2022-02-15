@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_gravity="bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <FrameLayout
+
+     android:layout_gravity="bottom"
+     android:layout_marginBottom="110dp"
+     android:layout_width="match_parent"
+
+     android:background="#00555555"
+     android:layout_height="250dp">
+
+     <ImageView
+         android:layout_width="100dp"
+         android:layout_gravity="start"
+    android:layout_marginTop="10dp"
+         android:layout_marginLeft="20dp"
+         android:layout_height="match_parent"
+         android:src="@drawable/jhbk"
+         />
+     <com.nitish.typewriterview.TypeWriterView
+         android:layout_width="250dp"
+          android:layout_gravity="center"
+         android:gravity="center"
+         android:layout_height="wrap_content"
+         android:textSize="18dp"
+
+         android:fontFamily="@font/averia_gruesa_libre"
+         android:textColor="@color/white"
+      android:layout_marginBottom="40sp"
+         android:layout_marginLeft="60sp"
+         android:id="@+id/text_home_typr_1"
+         android:text=""
+         />
+
+
+
+
+
+
+
+ </FrameLayout>
+    
+    
+</FrameLayout>

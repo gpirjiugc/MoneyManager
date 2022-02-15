@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.calelndra_frag">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_gravity="bottom"
+       android:layout_marginTop="175sp"
+          >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+
+           android:layout_height="match_parent">
+         <androidx.cardview.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="150sp"
+             android:layout_marginLeft="10sp"
+             app:cardBackgroundColor="@color/mycolorback1"
+             android:layout_marginRight="10sp"
+             app:cardElevation="1sp"
+             android:layout_marginTop="15sp"
+             app:cardCornerRadius="18sp"
+             >
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:orientation="vertical"
+                 android:layout_height="match_parent">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Select Date "
+         android:layout_marginTop="10sp"
+                     android:fontFamily="@font/baloo_paaji"
+                     android:layout_marginLeft="10sp"
+                     android:textColor="#E4FBFB"
+                     />
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_marginLeft="10sp"
+                     android:gravity="center_horizontal|center"
+                     android:layout_marginRight="10sp"
+                     android:layout_height="60sp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="10sp"
+                        >
+
+                        <EditText
+                            android:background="@null"
+                            android:inputType="date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/date_et"
+                             android:nextFocusLeft="@id/month_et"
+                            android:maxLength="2"
+                            android:gravity="center"
+                            android:hint="01"
+
+                            android:textColor="@color/black"
+                            android:textColorHint="#A6A4A4"
+                            />
+                    </androidx.cardview.widget.CardView>
+                     <androidx.cardview.widget.CardView
+                         android:layout_marginLeft="20sp"
+                         android:layout_width="40sp"
+                         app:cardBackgroundColor="@color/white"
+                         android:layout_height="40sp"
+                         app:cardCornerRadius="10sp"
+                         >
+                         <EditText
+                             android:background="@null"
+                             android:inputType="date"
+                             android:gravity="center"
+                             android:nextFocusLeft="@id/year_et"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:id="@+id/month_et"
+                             android:maxLength="2"
+
+                             android:hint="01"
+
+                             android:textColor="@color/black"
+                             android:textColorHint="#A6A4A4"
+                             />
+                     </androidx.cardview.widget.CardView>
+                     <androidx.cardview.widget.CardView
+                         android:layout_marginLeft="20sp"
+                         android:layout_width="100sp"
+                         app:cardBackgroundColor="@color/white"
+                         android:layout_height="40sp"
+                         app:cardCornerRadius="10sp"
+                         >
+                         <EditText
+                             android:gravity="center"
+                             android:background="@null"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:id="@+id/year_et"
+                             android:maxLength="4"
+                             android:inputType="date"
+
+                             android:hint="2022"
+
+                             android:textColor="@color/black"
+                             android:textColorHint="#A6A4A4"
+                             />
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:background="@drawable/border_back"
+                     android:backgroundTint="@color/mycolorback"
+                     android:layout_height="30sp"
+                     android:layout_marginLeft="20sp"
+                     android:layout_marginTop="10sp"
+                     android:layout_marginRight="20sp"
+
+                     android:id="@+id/click_check_date"
+                     >
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:text="Check Data"
+
+                         android:fontFamily="@font/averia_gruesa_libre"
+                         android:textColor="@color/white"
+                         android:gravity="center"
+
+                         />
+
+
+                 </LinearLayout>
+             </LinearLayout>
+         </androidx.cardview.widget.CardView>
+
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/frame_calendra"
+
+               android:layout_width="match_parent"
+               android:layout_height="230sp"
+    android:layout_marginTop="20sp"
+               app:cardBackgroundColor="@color/white"
+               app:cardCornerRadius="15sp"
+               android:layout_marginLeft="20sp"
+               android:layout_marginRight="20sp"
+               android:paddingTop="10sp"
+               >
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text=""
+
+                   android:id="@+id/date_calendra"
+                   android:fontFamily="@font/averia_gruesa_libre"
+                   android:gravity="center"
+                   android:textSize="20sp"
+                   android:textColor="@color/black"
+                   />
+
+
+               <LinearLayout
+                   android:layout_marginTop="30sp"
+                   android:layout_marginLeft="20sp"
+                   android:layout_marginRight="20sp"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:padding="10sp"
+                   >
+
+                   <FrameLayout
+                       android:layout_width="wrap_content"
+
+                       android:layout_height="match_parent">
+                       <org.eazegraph.lib.charts.PieChart
+                           android:id="@+id/piechart1"
+                           android:layout_width="200sp"
+                           android:layout_height="match_parent"
+                           android:padding="15sp"
+                           />
+
+                       <TextView
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:fontFamily="@font/averia_gruesa_libre"
+                           android:id="@+id/total_spend_day"
+                           android:textColor="@color/black"
+                           android:textSize="18sp" />
+                   </FrameLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:orientation="vertical"
+                       android:layout_marginLeft="10sp"
+                       android:padding="20sp"
+                       android:layout_height="match_parent">
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="5sp"
+
+                           android:layout_height="wrap_content">
+                           <androidx.cardview.widget.CardView
+                               android:layout_width="15sp"
+                               android:layout_height="15sp"
+                               app:cardBackgroundColor="#3C99EA"
+                               app:cardCornerRadius="5sp"
+                               />
+                           <TextView
+                               android:layout_marginLeft="10sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Shopping"
+                               android:textColor="@color/black"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/averia_gruesa_libre"
+                               />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="5sp"
+
+                           android:layout_height="wrap_content">
+                           <androidx.cardview.widget.CardView
+                               android:layout_width="15sp"
+                               android:layout_height="15sp"
+                               app:cardBackgroundColor="#24E40F"
+                               app:cardCornerRadius="5sp"
+                               />
+                           <TextView
+                               android:layout_marginLeft="10sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Homes"
+                               android:textColor="@color/black"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/averia_gruesa_libre"
+                               />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="5sp"
+
+                           android:layout_height="wrap_content">
+                           <androidx.cardview.widget.CardView
+                               android:layout_width="15sp"
+                               android:layout_height="15sp"
+                               app:cardBackgroundColor="#FA3A3A"
+                               app:cardCornerRadius="5sp"
+                               />
+                           <TextView
+                               android:layout_marginLeft="10sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Medicine"
+                               android:textColor="@color/black"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/averia_gruesa_libre"
+                               />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="5sp"
+
+                           android:layout_height="wrap_content">
+                           <androidx.cardview.widget.CardView
+                               android:layout_width="15sp"
+                               android:layout_height="15sp"
+                               app:cardBackgroundColor="#EF711C"
+                               app:cardCornerRadius="5sp"
+                               />
+                           <TextView
+                               android:layout_marginLeft="10sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Restaurant"
+                               android:textColor="@color/black"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/averia_gruesa_libre"
+                               />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="5sp"
+
+                           android:layout_height="wrap_content">
+                           <androidx.cardview.widget.CardView
+                               android:layout_width="15sp"
+                               android:layout_height="15sp"
+                               app:cardBackgroundColor="#701640"
+                               app:cardCornerRadius="5sp"
+                               />
+                           <TextView
+                               android:layout_marginLeft="10sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Education"
+                               android:textColor="@color/black"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/averia_gruesa_libre"
+                               />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="5sp"
+
+                           android:layout_height="wrap_content">
+                           <androidx.cardview.widget.CardView
+                               android:layout_width="15sp"
+                               android:layout_height="15sp"
+                               app:cardBackgroundColor="#888888"
+                               app:cardCornerRadius="5sp"
+                               />
+                           <TextView
+                               android:layout_marginLeft="10sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Other"
+                               android:textColor="@color/black"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/averia_gruesa_libre"
+                               />
+                       </LinearLayout>
+
+
+                   </LinearLayout>
+
+               </LinearLayout>
+           </androidx.cardview.widget.CardView>
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_marginLeft="20sp"
+               android:layout_marginRight="20sp"
+               android:layout_marginTop="15sp"
+               android:id="@+id/rv_exp1"
+               android:layout_height="match_parent"/>
+       </LinearLayout>
+   </ScrollView>
+</FrameLayout>

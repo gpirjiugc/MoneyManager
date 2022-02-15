@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_gravity="bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+
+        android:layout_gravity="top"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+
+        android:background="#00555555"
+        android:layout_height="250dp">
+        <TextView
+            android:layout_width="180dp"
+
+            android:gravity="center"
+            android:layout_gravity="start|center"
+
+            android:layout_height="100dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:text="Specific Date Expenses View "
+            />
+
+        <LinearLayout
+            android:layout_width="100sp"
+            android:id="@+id/linear_button_tut4"
+            android:layout_height="40sp"
+            android:backgroundTint="@color/mycolorback"
+            android:background="@drawable/border_back"
+            android:layout_gravity="bottom|start"
+            android:layout_marginLeft="20dp"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Next"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_gravity="end"
+            android:tint="@color/white"
+            android:layout_marginRight="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_down_png_up_left"
+            />
+
+
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

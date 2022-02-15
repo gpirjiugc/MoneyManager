@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="100sp"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="95sp"
+        android:layout_marginLeft="10sp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10sp"
+  android:id="@+id/card_per_list"
+        android:layout_marginTop="15sp"
+        app:cardCornerRadius="20sp"
+        android:layout_marginRight="10sp"
+        >
+        <LinearLayout
+            android:padding="2sp"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="-10dp"
+                android:layout_width="70sp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="center"
+
+                app:cardCornerRadius="40sp"
+                android:layout_height="70sp">
+                <ImageView
+
+
+                    android:src="@drawable/icon_profile_2"
+                    android:layout_width="match_parent"
+                     android:id="@+id/profile_person_list"
+                    android:layout_height="match_parent"
+                       android:padding="5dp"
+
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/nameofper"
+                    android:text="Girijesh Paliwal"
+                    android:layout_marginTop="10sp"
+                    android:textColor="@color/black"
+
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:textSize="18sp"
+                    />  <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sfscsv"
+                android:textColor="#72B8E6"
+                android:id="@+id/per_relation"
+                android:layout_marginTop="35sp"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:textSize="15sp"
+                />
+
+
+
+            </FrameLayout>
+            <TextView
+                android:textColor="#72B8E6"
+                android:layout_width="match_parent"
+                android:gravity="end"
+                android:layout_height="wrap_content"
+                android:id="@+id/amount_of_per"
+
+                android:layout_gravity="center"
+                android:layout_marginRight="20sp"
+
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:background="@color/mycolorback1"
+            android:backgroundTint="@color/mycolorback1"
+            />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

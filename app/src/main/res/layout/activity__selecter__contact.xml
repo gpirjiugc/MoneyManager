@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#C9DCF8"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Activity_Selecter_Contact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/mycolorback"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/border_back"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_height="550dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/button_form"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/white"
+              android:layout_marginTop="10dp"
+                app:cardCornerRadius="25sp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_person_outline_24"
+                    android:id="@+id/image_profile_contact"
+                    />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:background="@drawable/border_back"
+                android:backgroundTint="@color/mycolorback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="Select Profile"
+                android:padding="5dp"
+                android:id="@+id/Select_image_add_per"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:layout_marginTop="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name Of Contact"
+
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/mycolorback"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:id="@+id/Edit_per_con"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:paddingStart="10dp"
+
+                android:nextFocusDown="@id/Edit_Mobile_number"
+                android:textColor="@color/white"
+
+                android:textColorHint="@color/white"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/mycolorback"
+                android:background="@drawable/back_edit"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Mobile Number "
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/mycolorback"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+
+                android:id="@+id/Edit_Mobile_number"
+                android:nextFocusDown="@id/Edit_Nick_name"
+                android:inputType="number"
+
+                android:textColorHint="@color/white"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/mycolorback"
+                android:background="@drawable/back_edit"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="NickName"
+
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/mycolorback"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+
+                android:id="@+id/Edit_Nick_name"
+
+                android:nextFocusDown="@id/button_form"
+                android:textColorHint="@color/white"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/mycolorback"
+                android:background="@drawable/back_edit"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15dp"
+                />
+            <LinearLayout
+                android:background="@drawable/back_button"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:id="@+id/submit_per"
+                android:orientation="vertical"
+                android:backgroundTint="@color/mycolorback"
+                android:layout_width="200sp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:fontFamily="@font/baloo_paaji"
+
+                    android:textColor="@color/white"
+
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Or"
+                android:fontFamily="@font/baloo_paaji"
+
+                android:textColor="@color/mycolorback"
+
+                />
+            <FrameLayout
+                android:background="@drawable/back_button"
+
+                android:gravity="center"
+                android:id="@+id/fecth_contact"
+                android:layout_marginTop="10dp"
+
+                android:backgroundTint="@color/mycolorback"
+                android:layout_width="200sp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="match_parent"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_person_outline_24"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="25dp"
+                    android:gravity="center"
+                    android:text="Fetch From Device"
+                    android:fontFamily="@font/baloo_paaji"
+
+                    android:textColor="@color/white"
+
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

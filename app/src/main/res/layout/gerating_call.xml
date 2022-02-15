@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="10sp"
+    android:background="@color/white"
+    android:layout_marginTop="10sp"
+    app:cardCornerRadius="18sp"
+    android:layout_height="200sp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+
+    >
+       <pl.droidsonroids.gif.GifImageView
+           android:layout_width="match_parent"
+           android:layout_height="120sp"
+           android:padding="20sp"
+           android:src="@drawable/loading"
+           android:background="@color/white"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:text="Checking Balance"
+           android:fontFamily="@font/baloo_paaji"
+           android:textSize="20sp"
+           android:background="@color/white"
+           android:textColor="@color/mycolorback"
+           android:id="@+id/text_gen_call"
+android:textStyle="bold"
+           android:layout_gravity="center"
+/>
+   </LinearLayout>
+
+</androidx.cardview.widget.CardView>

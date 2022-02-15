@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/back_card_chat"
+    android:backgroundTint="@color/white"
+
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+
+        android:fontFamily="@font/baloo_paaji"
+        android:textColor="@color/mycolorback"
+        android:layout_gravity="start"
+        android:layout_marginLeft="20dp"
+        />
+    <EditText
+        android:id="@+id/Edit_amount_chat"
+        android:inputType="number"
+
+        android:layout_width="match_parent"
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:paddingStart="10dp"
+
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/mycolorback"
+        android:background="@drawable/back_edit"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15dp"
+        />
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="80dp"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:gravity="center|start"
+           android:layout_height="50dp">
+           <RadioButton
+               android:layout_width="30dp"
+               android:layout_height="50dp"
+               android:id="@+id/radio1"
+               android:gravity="center"
+               android:layout_marginLeft="20dp"
+               />
+
+           <TextView
+               android:id="@+id/From_name_chat"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="start"
+               android:layout_marginLeft="20dp"
+               android:fontFamily="@font/baloo_paaji"
+               android:gravity="center"
+               android:text="From Girijesh"
+               android:textColor="@color/mycolorback" />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_marginTop="30sp"
+           android:layout_width="match_parent"
+           android:gravity="center|start"
+           android:layout_height="50dp">
+           <RadioButton
+               android:id="@+id/radio2"
+               android:layout_width="30dp"
+               android:layout_height="50dp"
+               android:gravity="center"
+
+               android:layout_marginLeft="20dp"
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:id="@+id/To_name_chat"
+               android:text="To Girijesh"
+               android:fontFamily="@font/baloo_paaji"
+               android:textColor="@color/mycolorback"
+               android:layout_gravity="start"
+               android:layout_marginLeft="20dp"
+               />
+
+       </LinearLayout>
+   </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:background="@drawable/border_back"
+
+            android:gravity="center"
+
+            android:layout_width="100sp"
+            android:id="@+id/linear_cancel_chat_button"
+            android:layout_height="40sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/mycolorback"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:layout_marginLeft="10dp"
+                android:tint="@color/mycolorback"
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_add_chat_button"
+
+
+            android:background="@drawable/border_back"
+
+            android:gravity="center"
+
+            android:layout_width="100sp"
+            android:layout_height="40sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/mycolorback"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_baseline_check_circle_24"
+                android:tint="@color/mycolorback" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

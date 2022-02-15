@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"  android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="00sp"
+        android:layout_marginLeft="50sp"
+        app:cardCornerRadius="35sp"
+        android:id="@+id/card_selecter_profiile"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="30sp"
+        android:layout_height="00sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click To Select One Profile Picture"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="30sp"
+                android:fontFamily="@font/baloo_paaji"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_1"
+                    android:padding="8sp"
+                    android:id="@+id/profiel_select_dialog_1"
+                    />
+                <ImageView
+                    android:layout_width="80sp"
+                    android:padding="8sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_2"
+                    android:id="@+id/profiel_select_dialog_2"
+                    />
+                <ImageView
+                    android:layout_marginLeft="10sp"
+                    android:layout_width="80sp"
+                    android:padding="8sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_3"
+                    android:id="@+id/profiel_select_dialog_3"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+
+
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_4"
+                    android:padding="8sp"
+
+                    android:id="@+id/profiel_select_dialog_4"
+                    />
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_height="match_parent"
+                    android:padding="8sp"
+                    android:src="@drawable/icon_profile_5"
+                    android:id="@+id/profiel_select_dialog_5"
+                    />
+                <ImageView
+                    android:layout_marginLeft="10sp"
+                    android:layout_width="80sp"
+                    android:padding="8sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_6"
+                    android:id="@+id/profiel_select_dialog_6"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_7"
+                    android:padding="8sp"
+
+                    android:id="@+id/profiel_select_dialog_7"
+                    />
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_marginLeft="10sp"
+                    android:padding="8sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_8"
+                    android:id="@+id/profiel_select_dialog_8"
+                    />
+                <ImageView
+                    android:layout_marginLeft="10sp"
+                    android:layout_width="80sp"
+                    android:padding="8sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_9"
+                    android:id="@+id/profiel_select_dialog_9"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_10"
+                    android:padding="8sp"
+
+                    android:id="@+id/profiel_select_dialog_10"
+                    />
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_marginLeft="10sp"
+                    android:padding="8sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_11"
+                    android:id="@+id/profiel_select_dialog_11"
+                    />
+                <ImageView
+                    android:layout_marginLeft="10sp"
+                    android:layout_width="80sp"
+                    android:padding="8sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_12"
+                    android:id="@+id/profiel_select_dialog_12"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

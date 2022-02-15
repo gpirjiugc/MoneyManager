@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+    tools:context="Sliders.Slider1">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:layout_gravity="center"
+     android:layout_height="wrap_content">
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="00sp"
+         android:layout_marginTop="10sp"
+         android:id="@+id/image_slide1_res"
+         android:layout_gravity="center"
+         android:padding="20sp"
+         android:src="@drawable/slider1" />
+     <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+         android:id="@+id/linear_slider_text_1"
+        android:layout_marginBottom="20sp"
+      android:gravity="center"
+        android:layout_height="0sp">
+
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Manage Your Credit and Debit "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/baloo_paaji"
+            android:textSize="25sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:text="This app can be used to maintain your business/shop customer credit, debit Replace your traditional udhar khata book with this digital ledger cashbook."
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/baloo_paaji"
+            android:textSize="15sp"
+            />
+
+
+     </LinearLayout>
+ </LinearLayout>
+
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_ledger_home"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.frag_ledger">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:id="@+id/card_add_per"
+        android:layout_gravity="bottom|end"
+
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="120sp"
+
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="@color/mycolorback"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_add_24"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="match_parent"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="100sp"
+           android:background="@color/mycolorback"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+
+               android:fontFamily="@font/baloo_paaji"
+               android:gravity="center"
+               android:text="Digital Ledger"
+               android:textColor="@color/white"
+               android:textSize="20sp" />
+
+           <LinearLayout
+          android:layout_marginTop="-10dp"
+               android:padding="3dp"
+               android:layout_width="match_parent"
+               android:layout_height="70sp">
+
+
+               <androidx.cardview.widget.CardView
+                   android:layout_gravity="center"
+                   android:layout_width="60dp"
+                   app:cardBackgroundColor="@color/mycolorback"
+                   android:layout_marginLeft="10dp"
+                   app:cardCornerRadius="25sp"
+                   android:layout_height="60dp">
+                   <ImageView
+                       android:padding="5dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+
+                       android:src="@drawable/icon_profile_2"
+                       android:id="@+id/image_home_profile_ledger"
+                       />
+
+
+
+               </androidx.cardview.widget.CardView>
+
+
+
+               <FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                   android:layout_marginLeft="5sp"
+                   android:orientation="vertical">
+
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:backgroundTint="@color/mycolorback"
+                       android:fontFamily="@font/baloo_paaji"
+                       android:text="Girijesh Paliwal"
+                       android:id="@+id/text_name_ledger_home"
+
+                       android:textColor="@color/white"
+                       android:textSize="20sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="25sp"
+                       android:id="@+id/text_profession_ledger_home"
+                       android:backgroundTint="@color/mycolorback"
+                       android:fontFamily="@font/averia_gruesa_libre"
+                       android:text="Android Developer"
+                       android:textColor="@color/white" />
+
+                   <TextView
+
+                       android:id="@+id/total_balance_"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="40sp"
+                       android:fontFamily="@font/averia_gruesa_libre"
+
+                       android:gravity="center"
+                       android:textColor="#5BF44A"
+                       android:textStyle="bold" />
+               </FrameLayout>
+
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginTop="5sp"
+           android:background="@color/mycolorback"
+           android:padding="20sp">
+
+           <LinearLayout
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/baloo_paaji"
+                   android:text="TOTAL DUE"
+                   android:textColor="@color/white"
+
+
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/averia_gruesa_libre"
+                       android:id="@+id/text_due_ledger_home"
+                   android:text="25,000 "
+                   android:textColor="#3A1717"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+           <View
+               android:layout_width="1sp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="20sp"
+               android:background="@color/white" />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30sp"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/baloo_paaji"
+                   android:gravity="center"
+                   android:text="TOTAL AVAILABLE"
+                   android:textColor="@color/white"
+                   android:textSize="12sp"
+
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/averia_gruesa_libre"
+
+                   android:id="@+id/text_net_ledger_home"
+                   android:text="45,000 "
+                   android:textColor="@color/white"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+           <View
+               android:layout_width="1sp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="20sp"
+               android:background="@color/white" />
+
+           <LinearLayout
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="20sp"
+               android:gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/baloo_paaji"
+                   android:gravity="center"
+                   android:text="TOTAL CREDIT"
+
+                   android:textColor="@color/white"
+                   android:textSize="12sp"
+                   android:textStyle="bold"
+
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/averia_gruesa_libre"
+                   android:id="@+id/text_credit_ledger_home"
+                   android:text="35,000 "
+                   android:textColor="#30F622"
+                   android:textStyle="bold" />
+           </LinearLayout>
+
+       </LinearLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/rv_list_persons"
+           android:layout_marginTop="10dp"
+           android:layout_marginRight="10dp" />
+   </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Monthly_expenses">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/mycolorback"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+           android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="70dp"
+                android:padding="10dp"
+                android:layout_height="50dp"
+                android:tint="@color/white"
+                android:src="@drawable/analytics"
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expenses Analysis"
+              android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/baloo_paaji"
+                android:textColor="@color/white"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="100dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <LinearLayout
+
+                    android:layout_width="200dp"
+                    android:id="@+id/lin_max_month"
+                    android:layout_height="120dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:tint="#6AF64B"
+                        android:src="@drawable/graph"
+                        />
+                   <FrameLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:layout_marginTop="10dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:fontFamily="@font/baloo_paaji"
+                           android:text="MiniMum Expenses Spent"
+                           android:textColor="@color/white"
+
+                           />
+                       <TextView
+                           android:layout_marginTop="30dp"
+                           android:id="@+id/minimum_anay"
+                           android:layout_width="wrap_content"
+                       android:layout_gravity="center|top"
+                           android:layout_height="wrap_content"
+                           android:fontFamily="@font/baloo_paaji"
+                           android:text="12,500"
+                           android:textSize="15dp"
+                           android:textColor="#030A32"
+                           />
+                       <TextView
+                           android:layout_marginTop="55dp"
+                           android:id="@+id/date_minimum_anay"
+                           android:layout_width="wrap_content"
+                           android:layout_gravity="bottom|center"
+                           android:layout_height="wrap_content"
+                           android:fontFamily="@font/averia_gruesa_libre"
+                           android:text="12-Jan-2022"
+                           android:textSize="12dp"
+                           android:textColor="#1F2F87"
+                           />
+
+                   </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:id="@+id/lin_min_month"
+
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:tint="#F66464"
+                        android:padding="3dp"
+                        android:src="@drawable/arrows"
+                        />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo_paaji"
+                            android:text="Maximum Expenses Spent"
+                            android:textColor="@color/white"
+
+                            />
+                        <TextView
+                            android:layout_marginTop="30dp"
+                            android:id="@+id/textDateMaxExpMonExp"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo_paaji"
+                            android:text="12,500"
+                            android:textSize="15dp"
+                            android:textColor="#030A32"
+                            />
+                        <TextView
+                            android:layout_marginTop="55dp"
+                            android:id="@+id/date_maximum_anay"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/averia_gruesa_libre"
+                            android:text="12-Jan-2022"
+                            android:textSize="12dp"
+                            android:textColor="#1F2F87"
+                            />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:layout_height="100dp"
+               android:layout_gravity="center|top"
+                android:layout_marginTop="260dp"
+                android:id="@+id/lin_avg_month"
+
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:tint="#0B1F51"
+                    android:padding="3dp"
+                    android:src="@drawable/average"
+                    />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo_paaji"
+                        android:text="AverageExpenses Spent"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textavgmonth"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18dp"
+                        android:text="67,900"
+                        android:fontFamily="@font/baloo_paaji"
+                        android:textColor="#030A32"
+
+                        android:gravity="center"
+                        />
+
+
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripted Per Day Data of Expenses"
+            android:fontFamily="@font/baloo_paaji"
+            android:textColor="@color/white"
+         android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+    <Spinner
+        android:layout_width="match_parent"
+        android:fontFamily="@font/baloo_paaji"
+        android:paddingStart="10sp"
+
+        android:textColor="@color/white"
+        android:id="@+id/spinner"
+        android:textSize="15sp"
+        android:layout_marginTop="420sp"
+        android:textColorHint="@color/white"
+        android:layout_height="40sp"
+        android:backgroundTint="@color/mycolorback"
+        android:background="@drawable/back_edit"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="400dp"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_anay"
+        />
+</FrameLayout>

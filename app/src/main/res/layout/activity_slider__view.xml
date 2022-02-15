@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Slider_View">
+  <androidx.viewpager.widget.ViewPager
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/viewpager"
+      />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:background="@drawable/border_back"
+        android:backgroundTint="#305FA8"
+        android:textSize="30sp"
+
+       android:id="@+id/slider_next"
+        android:visibility="invisible"
+        android:layout_marginRight="10sp"
+        android:layout_gravity="end"
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:textColor="#0D0E4A"
+        />
+    <LinearLayout
+
+
+        android:layout_gravity="bottom|center"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="-10sp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            android:id="@+id/image_1_slide"
+            android:tint="#0F61BC"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            android:tint="#0F61BC"
+            android:id="@+id/image_2_slide"
+            android:layout_marginLeft="10sp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            android:tint="#D8D8F8"
+            android:id="@+id/image_3_slide"
+            android:layout_marginLeft="10sp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            android:tint="#0F61BC"
+            android:id="@+id/image_4_slide"
+            android:layout_marginLeft="10sp"
+            />
+
+    </LinearLayout>
+
+    </FrameLayout>

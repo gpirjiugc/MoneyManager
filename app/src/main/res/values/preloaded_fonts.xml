@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/arapey</item>
+        <item>@font/averia_gruesa_libre</item>
+        <item>@font/baloo_paaji</item>
+        <item>@font/flamenco_light</item>
+        <item>@font/montserrat</item>
+    </array>
+</resources>

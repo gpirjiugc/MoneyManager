@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="130sp"
+     android:background="@color/white"
+   >
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="100sp"
+    android:layout_marginLeft="10sp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="30sp"
+
+    android:layout_marginTop="15sp"
+    app:cardCornerRadius="20sp"
+    android:layout_marginRight="10sp"
+    >
+    <LinearLayout
+        android:padding="2sp"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+
+
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:layout_width="80dp"
+       android:id="@+id/image_ins_exp"
+       android:padding="12dp"
+       android:layout_height="match_parent"
+       />
+
+       <FrameLayout
+           android:layout_width="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginLeft="20dp"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+                android:text="jjh"
+               android:id="@+id/nameofexp_ins"
+               android:layout_marginTop="10sp"
+               android:textColor="@color/black"
+
+               android:fontFamily="@font/baloo_paaji"
+               android:textSize="18sp"
+               />
+           <TextView
+
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="sfscsv"
+               android:textColor="@color/mycolorback"
+               android:id="@+id/type_exp_ins"
+               android:layout_marginTop="35sp"
+               android:fontFamily="@font/averia_gruesa_libre"
+               android:textSize="15sp"
+               />
+           <TextView
+               android:textColor="@color/mycolorback"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/des_of_exp_ins"
+               android:text="dcsdc"
+               android:layout_marginTop="57sp"
+               android:fontFamily="@font/averia_gruesa_libre"
+               android:textSize="12sp"
+               />
+
+           <TextView
+               android:textColor="@color/mycolorback"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/time_ofexp_ins"
+               android:text="7868767"
+               android:layout_marginTop="70sp"
+               android:fontFamily="@font/averia_gruesa_libre"
+               android:textSize="12sp"
+               />
+       </FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:textColor="@color/mycolorback"
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount_exp_ins"
+        android:layout_gravity="center"
+
+
+        android:fontFamily="@font/averia_gruesa_libre"
+        android:textSize="20sp"
+        />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

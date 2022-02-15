@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activity.Server_Check">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+      android:orientation="vertical"
+        android:layout_height="280sp">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:padding="10sp"
+            android:src="@drawable/servercheck"
+            android:background="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Server Check"
+            android:textSize="20sp"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/mycolorback"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="400sp"
+        android:padding="15sp"
+        android:layout_marginTop="10sp"
+
+
+        android:layout_marginLeft="10sp"
+
+        android:layout_marginRight="10sp"
+        android:id="@+id/rv_bank_server"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@drawable/border_back"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:id="@+id/check_Server"
+        android:layout_marginRight="10sp"
+        android:backgroundTint="@color/mycolorback"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Test Server"
+            android:textSize="18sp"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="This Application Provide A Feature Before Doing UPI Payment Check Server Activeness ,Server Down , Of Your Bank ,Server Testing Before Payment "
+        android:padding="20sp"
+
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/mycolorback"
+        android:gravity="center"
+        />
+
+
+
+
+</LinearLayout>

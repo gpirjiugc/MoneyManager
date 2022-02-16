@@ -19,11 +19,14 @@
                android:layout_gravity="center"
                android:layout_width="60dp"
                android:layout_marginLeft="10dp"
+               android:backgroundTint="@color/white"
+               android:background="@color/white"
                app:cardCornerRadius="25sp"
                android:layout_height="60dp">
                <ImageView
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:padding="5dp"
                    android:src="@drawable/icon_profile_2"
                    android:id="@+id/image_profile_contact_chat"
                    />
@@ -61,7 +64,8 @@
        </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_gravity="end"
+            android:layout_gravity="end|center"
+            android:layout_marginTop="5dp"
 
             android:layout_height="match_parent">
             <FrameLayout
@@ -139,7 +143,7 @@
                     android:layout_width="80sp"
                     android:orientation="vertical"
               android:layout_gravity="center"
-
+                   android:id="@+id/message_for_money"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10sp"
                     >

@@ -21,10 +21,11 @@ import com.pixplicity.easyprefs.library.Prefs
 import org.w3c.dom.Text
 import java.util.logging.Handler
 
-class Adapter_list_per(Name : Array<String>, NickName : Array<String>, Images : Array<String>, context1: Context) : RecyclerView.Adapter<Adapter_list_per.abc>() {
+class Adapter_list_per(Name : Array<String>, NickName : Array<String>, Images : Array<String>, Contact : Array<String>,context1: Context) : RecyclerView.Adapter<Adapter_list_per.abc>() {
     var name : Array<String>
     var nickname : Array<String>
     var images : Array<String>
+    var contact : Array<String>
     lateinit var amounts : Array<Int?>
 
 
@@ -32,6 +33,7 @@ class Adapter_list_per(Name : Array<String>, NickName : Array<String>, Images : 
     var context : Context? = null
     init {
        name = Name
+        contact = Contact
         nickname = NickName
         images = Images
         context = context1
@@ -121,6 +123,7 @@ class Adapter_list_per(Name : Array<String>, NickName : Array<String>, Images : 
             Prefs.putString("current_chat_name",name[position].toString())
             Prefs.putString("current_chat_nick_name",nickname[position])
             Prefs.putString("current_chat_image",images[position])
+            Prefs.putString("current_chat_contact",contact[position])
 
            var aas : AppCompatActivity  = context as AppCompatActivity
             aas.supportFragmentManager.beginTransaction().replace(R.id.frame1,Frag_chat()).commit()
@@ -131,6 +134,7 @@ class Adapter_list_per(Name : Array<String>, NickName : Array<String>, Images : 
             Prefs.putString("current_chat_name",name[position].toString())
             Prefs.putString("current_chat_nick_name",nickname[position])
             Prefs.putString("current_chat_image",images[position])
+            Prefs.putString("current_chat_contact",contact[position])
             var aas : AppCompatActivity  = context as AppCompatActivity
 
             aas.supportFragmentManager.beginTransaction().replace(R.id.frame1,Frag_chat()).commit()

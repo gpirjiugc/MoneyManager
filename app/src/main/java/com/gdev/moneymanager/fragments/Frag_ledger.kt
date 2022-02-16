@@ -118,7 +118,7 @@ class frag_ledger : Fragment() {
         val contactnumber : Array<String> =   Prefs.getString("Contact_Number", "").split("[,]".toRegex()).dropLastWhile{ it.isEmpty() }.toTypedArray()
         val contactprofile : Array<String> =   Prefs.getString("Contact_Profile", "").split("[,]".toRegex()).dropLastWhile{ it.isEmpty() }.toTypedArray()
 
-        var adapter =  Adapter_list_per(contactsname,nicknames,contactprofile, requireContext())
+        var adapter =  Adapter_list_per(contactsname,nicknames,contactprofile,contactnumber,requireContext() )
         binding.rvListPersons.layoutManager =  LinearLayoutManager(context)
         binding.rvListPersons.adapter = adapter
     }

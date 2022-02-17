@@ -1,32 +1,29 @@
 package com.gdev.moneymanager.fragments
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.ContextWrapper
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.net.LinkAddress
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.*
-import androidx.fragment.app.Fragment
 import android.widget.*
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.gdev.moneymanager.*
 import com.gdev.moneymanager.Activity.Balance_Check
 import com.gdev.moneymanager.Activity.HomeActivty
 import com.gdev.moneymanager.Activity.Monthly_expenses
 import com.gdev.moneymanager.Activity.Server_Check
+import com.gdev.moneymanager.R
 import com.gdev.moneymanager.ViewModel.ViewModelHome
 import com.gdev.moneymanager.databinding.FragmentHomeFragBinding
 import com.nitish.typewriterview.TypeWriterView
 import com.pixplicity.easyprefs.library.Prefs
-import kotlin.time.seconds
 
 class home_frag : Fragment() {
 
@@ -55,7 +52,7 @@ class home_frag : Fragment() {
             .setUseDefaultSharedPreference(true)
             .build()
 
-
+        Prefs.putString("stateofapp","home")
 
         binding = FragmentHomeFragBinding.inflate(layoutInflater)
         bal = binding.linearBankBalanc

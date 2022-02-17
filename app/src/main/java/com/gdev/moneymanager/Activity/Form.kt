@@ -72,6 +72,12 @@ var id = ""
          if (editText_number.text.isEmpty() || edittext_name.text.isEmpty() || id.equals("") || editText_bal.text.isEmpty()||editText_profession.text.isEmpty()) {
              Toast.makeText(this, "Fill Is Required ", Toast.LENGTH_LONG).show()
          } else {
+
+             if(editText_number.text.toString().length <= 9){
+                 Toast.makeText(this,"Number Must Be 10 Digit ",Toast.LENGTH_SHORT).show()
+             }
+             else {
+
              Prefs.putString("name", edittext_name.text.toString())
              Prefs.putString("number", editText_number.text.toString())
              Prefs.putString("image", id)
@@ -79,7 +85,7 @@ var id = ""
              Prefs.putString("profession",editText_profession.text.toString())
              Toast.makeText(this, "welcome", Toast.LENGTH_LONG).show()
              Prefs.putString("status_of_form","true")
-             startActivity(Intent(this, HomeActivty::class.java))
+             startActivity(Intent(this, HomeActivty::class.java)) }
          }
      }
         imageView1.setOnClickListener {

@@ -119,26 +119,18 @@ class Adapter_list_per(Name : Array<String>, NickName : Array<String>, Images : 
 
 
 
-        holder.card.setOnClickListener { if(Prefs.getString("current_chat_name","").equals("")){
-            Prefs.putString("current_chat_name",name[position].toString())
-            Prefs.putString("current_chat_nick_name",nickname[position])
-            Prefs.putString("current_chat_image",images[position])
-            Prefs.putString("current_chat_contact",contact[position])
+        holder.card.setOnClickListener {
 
-           var aas : AppCompatActivity  = context as AppCompatActivity
-            aas.supportFragmentManager.beginTransaction().replace(R.id.frame1,Frag_chat()).commit()
-
-        }
-            else {
 
             Prefs.putString("current_chat_name",name[position].toString())
             Prefs.putString("current_chat_nick_name",nickname[position])
             Prefs.putString("current_chat_image",images[position])
             Prefs.putString("current_chat_contact",contact[position])
+
             var aas : AppCompatActivity  = context as AppCompatActivity
 
             aas.supportFragmentManager.beginTransaction().replace(R.id.frame1,Frag_chat()).commit()
-        }
+
         }
 
       }

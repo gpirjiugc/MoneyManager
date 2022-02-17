@@ -3,17 +3,15 @@ package com.gdev.moneymanager.fragments
 import android.content.ContextWrapper
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.gdev.moneymanager.Activity.Activity_Selecter_Contact
 import com.gdev.moneymanager.Activity.HomeActivty
 import com.gdev.moneymanager.Adapter.Adapter_list_per
-import com.gdev.moneymanager.R
 import com.gdev.moneymanager.databinding.FragmentFragLedgerBinding
 import com.pixplicity.easyprefs.library.Prefs
 
@@ -88,6 +86,7 @@ class frag_ledger : Fragment() {
                 .setPrefsName(requireActivity().packageName)
                 .setUseDefaultSharedPreference(true)
                 .build()
+        Prefs.putString("stateofapp","frag_led")
         getamounts()
         binding.textCreditLedgerHome.text =totalamount_plus.toString()
 
@@ -119,7 +118,12 @@ class frag_ledger : Fragment() {
         val contactprofile : Array<String> =   Prefs.getString("Contact_Profile", "").split("[,]".toRegex()).dropLastWhile{ it.isEmpty() }.toTypedArray()
 
         var adapter =  Adapter_list_per(contactsname,nicknames,contactprofile,contactnumber,requireContext() )
-        binding.rvListPersons.layoutManager =  LinearLayoutManager(context)
+        binding.rvListPersons.apply {
+            layoutManager = LinearLayoutManager(context).apply {
+                stackFromEnd = true
+                reverseLayout = true
+            }
+        }
         binding.rvListPersons.adapter = adapter
     }
 

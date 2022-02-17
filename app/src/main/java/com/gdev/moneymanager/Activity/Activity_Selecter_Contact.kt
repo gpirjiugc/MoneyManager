@@ -1,14 +1,17 @@
 package com.gdev.moneymanager.Activity
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ContextWrapper
 import android.content.Intent
 import android.database.Cursor
+import android.icu.lang.UProperty.NAME
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Contacts.People
 import android.provider.ContactsContract
+import android.provider.ContactsContract.CommonDataKinds.Phone
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.WindowManager
@@ -32,11 +35,11 @@ class Activity_Selecter_Contact : AppCompatActivity() {
     lateinit var aa : AlertDialog
     var id = ""
     var name = ""
-    var nickname = ""
     var number = ""
 
     lateinit var binding: ActivitySelecterContactBinding
 
+    @SuppressLint("Range")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -44,15 +47,34 @@ class Activity_Selecter_Contact : AppCompatActivity() {
 
 
             if (resultCode == Activity.RESULT_OK) {
+
+
+
                 var imageView  = binding.imageProfileContact
                var contactData : Uri = data!!.getData()!!;
+
+                val cr = contentResolver
+                val cursor = cr.query(ContactsContract.Contacts.CONTENT_URI, null, "DISPLAY_NAME = '" + NAME.toString() + "'", null, null)
                 var c  : Cursor = managedQuery(contactData, null, null, null, null);
                 if (c.moveToFirst()) {
                     var name1 = c.getString(c.getColumnIndexOrThrow(ContactsContract.Contacts.DISPLAY_NAME));
-                    var number1 = c.getString(c.getColumnIndexOrThrow((ContactsContract.Contacts.HAS_PHONE_NUMBER)))
+                    val contactId: String = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID))
+
+               var       phones : Cursor = cr.query(Phone.CONTENT_URI, null,
+                       Phone.CONTACT_ID + " = " + contactId, null, null)!!;
+                    while (phones.moveToNext()) {
+                        number =    phones.getString(phones.getColumnIndex(Phone.NUMBER));
+                    }
+
                    name = name1
 
-                    number = number1.toString()
+
+
+
+
+
+
+
 
 
                     val bb = AlertDialog.Builder(this)
@@ -210,13 +232,12 @@ class Activity_Selecter_Contact : AppCompatActivity() {
 
 
             Dexter.withContext(this)
-                    .withPermissions(Manifest.permission.READ_CONTACTS, Manifest.permission.SEND_SMS, ).withListener(object : MultiplePermissionsListener {
+                    .withPermissions(Manifest.permission.READ_CONTACTS, Manifest.permission.SEND_SMS).withListener(object : MultiplePermissionsListener {
                         override fun onPermissionsChecked(report: MultiplePermissionsReport) { /* ... */
-                            if(report.areAllPermissionsGranted()){
+                            if (report.areAllPermissionsGranted()) {
                                 val intent = Intent(Intent.ACTION_PICK, People.CONTENT_URI)
                                 startActivityForResult(intent, 1)
-                            }
-                            else {
+                            } else {
                                 val intent = Intent(Intent.ACTION_PICK, People.CONTENT_URI)
                                 startActivityForResult(intent, 1)
                             }
@@ -228,7 +249,7 @@ class Activity_Selecter_Contact : AppCompatActivity() {
                         }
                     }).check()
 
-           }
+        }
 
 
 
@@ -340,21 +361,29 @@ class Activity_Selecter_Contact : AppCompatActivity() {
             else {
 
 
-                if(Prefs.getString("Contact_Name", "").equals("")){
-                    Prefs.putString("Contact_Name", binding.EditPerCon.text.toString())
-                    Prefs.putString("Nick_Name", binding.EditNickName.text.toString())
-                    Prefs.putString("Contact_Number", binding.EditMobileNumber.text.toString())
-                    Prefs.putString("Contact_Profile", id)
-                    startActivity(Intent(this, HomeActivty::class.java).putExtra("rcv", "per"))
-                    finish()
+
+
+                if(binding.EditMobileNumber.text.toString().length <= 9 ){
+                    Toast.makeText(this, "Number Must Be 10 Digit ", Toast.LENGTH_SHORT).show()
                 }
-                else {
-                    Prefs.putString("Contact_Name", Prefs.getString("Contact_Name", "") + "," + binding.EditPerCon.text.toString())
-                    Prefs.putString("Nick_Name", Prefs.getString("Nick_Name", "") + "," + binding.EditNickName.text.toString())
-                    Prefs.putString("Contact_Number", Prefs.getString("Contact_Number", "") + "," + binding.EditMobileNumber.text.toString())
-                    Prefs.putString("Contact_Profile", Prefs.getString("Contact_Profile", "") + "," + id)
-                    startActivity(Intent(this, HomeActivty::class.java).putExtra("rcv", "per"))
-                    finish()
+
+          else {
+
+              if (Prefs.getString("Contact_Name", "").equals("")) {
+                        Prefs.putString("Contact_Name", binding.EditPerCon.text.toString())
+                        Prefs.putString("Nick_Name", binding.EditNickName.text.toString())
+                        Prefs.putString("Contact_Number", binding.EditMobileNumber.text.toString())
+                        Prefs.putString("Contact_Profile", id)
+                        startActivity(Intent(this, HomeActivty::class.java).putExtra("rcv", "per"))
+                        finish()
+                    } else {
+                        Prefs.putString("Contact_Name", Prefs.getString("Contact_Name", "") + "," + binding.EditPerCon.text.toString())
+                        Prefs.putString("Nick_Name", Prefs.getString("Nick_Name", "") + "," + binding.EditNickName.text.toString())
+                        Prefs.putString("Contact_Number", Prefs.getString("Contact_Number", "") + "," + binding.EditMobileNumber.text.toString())
+                        Prefs.putString("Contact_Profile", Prefs.getString("Contact_Profile", "") + "," + id)
+                        startActivity(Intent(this, HomeActivty::class.java).putExtra("rcv", "per"))
+                        finish()
+                    }
                 }
 
             }

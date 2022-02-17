@@ -8,10 +8,8 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.*
 import android.widget.*
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.gdev.moneymanager.Activity.HomeActivty
 import com.gdev.moneymanager.Adapter.Adapter_Expense_loader
@@ -19,8 +17,6 @@ import com.gdev.moneymanager.R
 import com.gdev.moneymanager.databinding.FragmentFragExpensesBinding
 import com.nitish.typewriterview.TypeWriterView
 import com.pixplicity.easyprefs.library.Prefs
-import me.ibrahimsn.lib.SmoothBottomBar
-import org.eazegraph.lib.charts.PieChart
 import org.eazegraph.lib.models.PieModel
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -47,7 +43,7 @@ class frag_expenses : Fragment() {
 
         binding = FragmentFragExpensesBinding.inflate(layoutInflater)
        intializingobjetcs()
-
+        Prefs.putString("stateofapp","frag_exp")
 
         getessainsiational()
         addchart()

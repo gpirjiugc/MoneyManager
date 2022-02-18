@@ -19,6 +19,17 @@
         android:roundIcon="@drawable/icon_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyManager">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.gdev.moneymanager.provider"
+
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepathxml" />
+        </provider>
         <activity android:name=".Activity.Monthly_expenses" android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity android:name=".Activity.Activity_Selecter_Contact" android:theme="@style/Theme.Design.NoActionBar"/>
 
